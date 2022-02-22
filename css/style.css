@@ -1,0 +1,56 @@
+header{
+    position: absolute;
+    z-index: 999;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.logo i{
+    color: green;
+    font-size: 2.5rem;
+}
+.logo span{
+    font-size: 2rem;
+}
+.menu  li{
+    margin: 0 15px;
+}
+.menu li::after{                /*Tạo cho li 1 cái thẻ div và style trực tiếp lên nó*/
+    content: "";
+    display: block;
+    width: 0%;
+    height: 5px;
+    background-color: green;
+    transition: 0.5s;
+}
+.menu li.active::after{         /*Giữ cho Home có thẻ div*/
+    width: 100%;
+}
+.menu li:hover::after{          /*khi hover vào thẻ li thì afer sẽ xuất hiện*/
+    width: 100%;
+}
+/* Carousel */
+.carousel-item{
+   height: 800px;              
+   background-position: center;
+   background-size: cover;
+}
+.carousel-item:nth-child(1){
+    background-image: url(../images/image/finland.jpg);
+}
+.carousel-item:nth-child(2){
+    background-image: url(../images/image/mountains.jpg);
+}
+.carousel-item:nth-child(3){
+    background-image: url(../images/image/mountains-1.jpg);
+}
+.carousel__thumb{
+    width: 140px;
+    margin: auto;
+}
+.carousel__thumb img{
+    border-radius: 50%;
+}
+.carousel-caption{          /*nếu có position dùng top left transform translate để chỉnh*/
+    top: 50%;
+    transform:translateY(-50%)
+}
